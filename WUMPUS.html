@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hunt the Wumpus</title>
+        <link rel="stylesheet" href="css/styles.css">
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,300;0,400;1,200;1,300;1,400&family=Ultra&display=swap" rel="stylesheet"> 
+      
+        
+        <script src = "js/wumpus.js">
+        </script> 
+    </head>
+    <body>
+        <h1>Hunt the Wumpus</h1>
+        
+        <div class="container">
+			<input type="button" value="Start Game" id="startButton" onClick="createCave()"></button>
+			
+        <!--   <h2>Here is the starting room for the Wumpus</h2>-->
+          
+           <h2 id="currentRoom"></h2><br>
+		
+		 <h2 id="currentRoomArray"></h2><br>
+	
+		
+		
+			 <div class="gameContainer" id="showGame">
+           <h2 id="msg">selection</h2>
+		<div class="buttonContainer">		 
+        
+			<h2 id=""></h2>
+			<button type="button" class="button1" id="firstButton" onClick="roomTurn(1)"></button> 
+	
+				  
+			<h2></h2>
+			<button type="button" class="button1" id="secondButton" value="select" onClick="roomTurn(2)"> </button>
+		
+			<h2></h2>
+			<button type="button"class="button1" id="thirdButton" value="select" onClick="roomTurn(3)"> </button>
+		</div>
+				 
+		</div>	
+		<h2 id="option"></h2></div>
+	 <h2 id="msg2"></h2>
+			<input type="button" class="playAgain" value="Start Game" id="againButton" onClick="createCave()">
+		</div>
+</button>
+        </div>
+				 
+    </body>
+</html>
