@@ -40,6 +40,7 @@ function createCave()
 	//document.getElementById('currentRoom').innerHTML = myStartRoom ;
 	
 	currentRoom = myStartNumber;
+	//Alerts will be deleted when development is complete.
 	alert("This is the first room " + adjacentRooms[currentRoom][0]);
 	
 	roomTest = adjacentRooms[myStartNumber][0];
@@ -58,15 +59,14 @@ function createCave()
 function roomTurn(roomCase)
 
 {
-	
-				
 		switch (roomCase)
 			{
 					case 1: 
 			alert("Case 1 is working")
 					
 				var roomNumber = document.getElementById("firstButton").textContent;
- 				checkRoom(roomNumber);
+				defaultRoomMsg()
+				checkRoom(roomNumber);
 				alert("This is the room Number" + roomNumber)
 
 			
@@ -75,14 +75,13 @@ function roomTurn(roomCase)
 				document.getElementById('thirdButton').innerHTML = adjacentRooms[roomNumber][2];
 		
 						//return "tie";
-					break;
-			
-			
+					break;			
 					case 2:
 			
 			alert("Case 2 is working")
 				var roomNumber = document.getElementById("secondButton").textContent;
- checkRoom(roomNumber);
+ 			defaultRoomMsg();
+				checkRoom(roomNumber);
 				alert("This is the room Number" + roomNumber)
 			document.getElementById('firstButton').innerHTML = adjacentRooms[roomNumber][0];
 				document.getElementById('secondButton').innerHTML = adjacentRooms[roomNumber][1];
@@ -98,6 +97,7 @@ function roomTurn(roomCase)
 				var roomNumber = document.getElementById("thirdButton").textContent;
  
 				alert("This is the room Number" + roomNumber)
+				defaultRoomMsg()	
 			checkRoom(roomNumber);
 				document.getElementById('firstButton').innerHTML = adjacentRooms[roomNumber][0];
 				document.getElementById('secondButton').innerHTML = adjacentRooms[roomNumber][1];
@@ -114,12 +114,20 @@ function roomTurn(roomCase)
 	
 }
 
-function checkRoom(roomNumber)
+function defaultRoomMsg()
+{alert("default Room Msg is working")
+	document.getElementById('msg').innerHTML = "Tunnels lead to rooms";
+		document.getElementById('msg2').innerHTML = "Select a room to search for the wumpus";	
+}
 
+function checkRoom(roomNumber)
 {
-	
+	alert("Check Room function is working")
+	document.getElementById('msg').innerHTML = "Tunnels lead to rooms";
+		document.getElementById('msg2').innerHTML = "Select a room to search for the wumpus";	
 	if (roomNumber == wumpusRoom)
 		{
+			
 			alert("Wumpus eat you!!! - Game Over!!");
 			document.getElementById('msg').innerHTML = "The wumpus ate you!!! - Game over!!";
 			document.getElementById('msg2').innerHTML = "Do you want to play again?";
@@ -130,12 +138,27 @@ function checkRoom(roomNumber)
 		{
 			alert("Flying Bats - Aaah!!!");
 			document.getElementById('msg').innerHTML = "Flying Bats - Aaah!!!";
+			document.getElementById('msg2').innerHTML = "The bats fly you to another room";
 		}
 	else 
-		{
-			document.getElementById('msg').innerHTML = "Tunnels lead to rooms";
-			document.getElementById('msg2').innerHTML = "_________________";
+		{ alert("Adjacent room else statement working?")
+		const j = 0;
+			while (j < 3)
+			{
+					alert("j")	
+					if (adjacentRooms[roomNumber][j] == wumpusRoom)
+					{
+						document.getElementById('msg').innerHTML = "There is a horrible stench";
+					
+					}
+					else if (adjacentRooms[roomNumber][j] == batRoom)
+					{
+						document.getElementById('msg').innerHTML = "You hear the flapping of wings";
+					}	
+					
+					j++;
+			}
 		}
-	
+
 	
 }
