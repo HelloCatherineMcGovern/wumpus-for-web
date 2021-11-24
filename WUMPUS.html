@@ -1,51 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Hunt the Wumpus</title>
-        <link rel="stylesheet" href="css/styles.css">
-			<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,300;0,400;1,200;1,300;1,400&family=Ultra&display=swap" rel="stylesheet"> 
-      
-        
-        <script src = "js/wumpus.js">
-        </script> 
-    </head>
-    <body>
-        <h1>Hunt the Wumpus</h1>
-        
-        <div class="container">
-			<input type="button" value="Start Game" id="startButton" onClick="createCave()"></button>
+	<html>
+		<head>
+			<title>Hunt the Wumpus</title>
+			<link rel="stylesheet" href="css/styles.css">
+				<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,300;0,400;1,200;1,300;1,400&family=Ultra&display=swap" rel="stylesheet"> 
+			<script src = "js/wumpus.js">
+			</script> 
+		</head>
+		<body>
+			<h1>Hunt the Wumpus</h1>
+	<!--BEGIN GAME CONTAINER-->
+	<!--BEGIN GAME CONTAINER-->
+	<!--BEGIN GAME CONTAINER-->	        
+		<div class="container">
+			<input type="button" value="Start Game"  class="button1" id="startButton" onClick="createCave()"></button>
+	<!--BEGIN BUTTON CONTAINER-->
+	<!--BEGIN BUTTON CONTAINER-->
+	<!--BEGIN BUTTON CONTAINER-->		
+			<div class="gameContainer" id="showGame">
+			<h2 id="msg">selection</h2>
+					<div class="buttonContainer">		 
+					
+						
+						<button type="button" class="button1" id="firstButton" onClick="roomTurn(1)"></button> 
+								
+						<button type="button" class="button1" id="secondButton" value="select" onClick="roomTurn(2)"> </button>
+					
+						<button type="button"class="button1" id="thirdButton" value="select" onClick="roomTurn(3)"> </button>
+					</div>	 
+			</div>
+	<!--END BUTTON CONTAINER-->		
+	<!--END BUTTON CONTAINER-->		
+	<!--END BUTTON CONTAINER-->		
+			<h2 id="option"></h2>
+			<h2 id="msg2">Click the start button to begin the game</h2>
+			<h2 id="killMsg"></h2>
+
+			<div id="killWumpusBoard" class="killWumpusBoard">
+				<button type="button" class="button1" id="firstKillButton" onClick="killEval(0)"></button> 
+								
+				<button type="button" class="button1" id="secondKillButton" value="select" onClick="killEval(1)"> </button>
 			
-        <!--   <h2>Here is the starting room for the Wumpus</h2>-->
-          
-           <h2 id="currentRoom"></h2><br>
-		
-		 <h2 id="currentRoomArray"></h2><br>
-	
-		
-		
-			 <div class="gameContainer" id="showGame">
-           <h2 id="msg">selection</h2>
-		<div class="buttonContainer">		 
-        
-			<h2 id=""></h2>
-			<button type="button" class="button1" id="firstButton" onClick="roomTurn(1)"></button> 
-	
-				  
-			<h2></h2>
-			<button type="button" class="button1" id="secondButton" value="select" onClick="roomTurn(2)"> </button>
-		
-			<h2></h2>
-			<button type="button"class="button1" id="thirdButton" value="select" onClick="roomTurn(3)"> </button>
+				<button type="button"class="button1" id="thirdKillButton" value="select" onClick="killEval(2)"> </button>
+			</div>
+
+			<p>-----------------------------</p>
+			<h2 id="score">Score</h2>
+			<h2 id="score"></h2>
+			<input type="button" class="playAgain" value="Start Game" id="againButton" onClick="createCave()"> </button>
+			
 		</div>
-				 
-		</div>	
-		<h2 id="option"></h2></div>
-	 <h2 id="msg2"></h2>
-			<input type="button" class="playAgain" value="Start Game" id="againButton" onClick="createCave()">
-		</div>
-</button>
-        </div>
-				 
-    </body>
-</html>
+		
+	<!--END GAME CONTAINER-->		
+	<!--END GAME CONTAINER-->		
+	<!--END GAME CONTAINER-->				
+					
+		</body>
+	</html>

@@ -110,3 +110,7 @@ h2 {
 .button3:hover {
   background-color: cyan;
 }
+
+.killWumpusBoard {
+  display: none;
+}
